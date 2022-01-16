@@ -81,3 +81,8 @@ else
   isUp=true
 }
 }
+function hitBall(){
+  if(bolaY === playerY && bolaX === playerHeight){
+    bolaX-=5
+  }
+}
