@@ -17,36 +17,8 @@ function setup() {
 
 function draw() {
   background(255, 204, 0);
-  if(bolaX <= 695 && isRight) 
-  {
-    bolaX+=5;
-  }
-  else if(bolaX >=25)
-  {
-    isRight = false
-    bolaX-=5
-  }
-  else
-  {
-    isRight=true
-  }
-  if(bolaY <= 375 && isUp) 
-  {
-    bolaY+=5;
-  }
-  else if(bolaY >=25)
-  {
-    isUp = false
-    bolaY-=5
-  }
-  else
-  {
-    isUp=true
-  }
-  
+  moveBall();
   circle(bolaX, bolaY, 50);
-
-  circle(width/2, height/2, 50, 50);
   
   rect(650,30,40,70);
 
@@ -76,10 +48,36 @@ function player(){
     }
     
   }
-  
 
-
-  
   rect(30, playerY,40,playerHeight);
 
+}
+
+function moveBall(){
+  if(bolaX <= 695 && isRight) 
+{
+  bolaX+=5;
+}
+else if(bolaX >=25)
+{
+  isRight = false
+  bolaX-=5
+}
+else
+{
+  isRight=true
+}
+if(bolaY <= 375 && isUp) 
+{
+  bolaY+=5;
+}
+else if(bolaY >=25)
+{
+  isUp = false
+  bolaY-=5
+}
+else
+{
+  isUp=true
+}
 }
